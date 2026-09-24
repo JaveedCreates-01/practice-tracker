@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>My Practice Tracker</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div>
+
+            <p class="small-title">
+                MY PERSONAL PRODUCTIVITY
+            </p>
+
+            <h1>
+                Daily Practice Tracker
+            </h1>
+
+            <p class="subtitle">
+                Practice every day. Track your progress. Improve consistently.
+            </p>
+
+        </div>
+
+
+        <div class="month-selector">
+
+            <button id="previousMonth">
+                ‹
+            </button>
+
+            <h2 id="monthTitle">
+                September 2026
+            </h2>
+
+            <button id="nextMonth">
+                ›
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="container">
+
+
+        <!-- ================= STATISTICS ================= -->
+
+        <section class="stats">
+
+
+            <div class="stat-card">
+
+                <p>
+                    Today's Progress
+                </p>
+
+                <h2 id="todayProgress">
+                    0%
+                </h2>
+
+            </div>
+
+
+
+            <div class="stat-card">
+
+                <p>
+                    Completed Today
+                </p>
+
+                <h2 id="todayCompleted">
+                    0 / 0
+                </h2>
+
+            </div>
+
+
+
+            <div class="stat-card">
+
+                <p>
+                    Monthly Practice
+                </p>
+
+                <h2 id="monthlyCompleted">
+                    0
+                </h2>
+
+            </div>
+
+
+
+            <div class="stat-card">
+
+                <p>
+                    Current Streak
+                </p>
+
+                <h2 id="currentStreak">
+                    0 days
+                </h2>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ================= SKILLS / PRACTICES ================= -->
+
+        <section class="card">
+
+
+            <div class="section-header">
+
+                <div>
+
+                    <h2>
+                        📚 My Skills & Practices
+                    </h2>
+
+                    <p>
+                        Add the skills you want to learn and track them every day.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ADD SKILL -->
+
+            <div class="add-practice">
+
+                <input
+                    type="text"
+                    id="practiceInput"
+                    placeholder="Example: Python, DSA, Java, React..."
+                    maxlength="40"
+                >
+
+                <button id="addPractice">
+                    + Add Skill
+                </button>
+
+            </div>
+
+
+
+            <!-- TRACKER TABLE -->
+
+            <div class="table-container">
+
+                <table id="trackerTable">
+
+                    <thead>
+
+                        <tr id="tableHeader">
+
+                            <th>
+                                Skill / Practice
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="tableBody">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <p
+                id="emptyMessage"
+                class="empty-message"
+            >
+                You haven't added any skills yet.
+                Add your first skill above.
+            </p>
+
+
+        </section>
+
+
+
+        <!-- ================= NOTES + GOALS ================= -->
+
+        <section class="two-column">
+
+
+            <!-- DAILY NOTES -->
+
+            <div class="card">
+
+                <div class="section-header">
+
+                    <div>
+
+                        <h2>
+                            📝 Today's Notes
+                        </h2>
+
+                        <p>
+                            What did I learn or practice today?
+                        </p>
+
+                    </div>
+
+                    <span id="saveMessage">
+                        Saved
+                    </span>
+
+                </div>
+
+
+                <textarea
+                    id="dailyNotes"
+                    placeholder="Example:
+
+Today I practiced Python loops.
+
+I understood nested loops better.
+
+Tomorrow I need to practice more problems."
+                ></textarea>
+
+            </div>
+
+
+
+            <!-- MONTHLY GOALS -->
+
+            <div class="card">
+
+                <div class="section-header">
+
+                    <div>
+
+                        <h2>
+                            🎯 Monthly Goals
+                        </h2>
+
+                        <p>
+                            Things I want to complete this month.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div id="goalsContainer">
+
+                </div>
+
+
+                <button
+                    class="secondary-button"
+                    id="addGoal"
+                >
+                    + Add Goal
+                </button>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ================= ANALYSIS ================= -->
+
+        <section class="card">
+
+
+            <div class="section-header">
+
+                <div>
+
+                    <h2>
+                        📊 My Progress Analysis
+                    </h2>
+
+                    <p>
+                        Understand your consistency for this month.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="analysisMessage"
+                class="analysis-message"
+            >
+            </div>
+
+
+            <div
+                id="habitAnalysis"
+                class="habit-analysis"
+            >
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            My Practice Tracker • Personal Learning System
+        </p>
+
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
